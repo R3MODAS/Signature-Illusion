@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 4500px;
+}
+
+/* ==================  Font ======================== */
+@font-face {
+    font-family: 'Variera Demo';
+    src: url("../css/font/variera-demo.bold-700.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Variera Demo';
+    src: url("../css/font/variera-demo.extra-bold-800.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Eastman Grotesque Trial';
+    src: url("../css/font/Eastman-Grotesque-Light-trial-500.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Eastman Grotesque Trial';
+    src: url("../css/font/Eastman-Grotesque-Demi-Bold-trial-600.otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Eastman Grotesque Trial';
+    src: url("../css/font/Eastman-Grotesque-Bold-trial-700.otf");
+    font-weight: 700;
+}
+
+/* ==================  Global Classes ======================== */
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.var700 {
+    font-family: 'Variera Demo';
+    font-weight: 700;
+}
+
+.var800 {
+    font-family: 'Variera Demo';
+    font-weight: 800;
+}
+
+.east500 {
+    font-family: 'Eastman Grotesque Trial';
+    font-weight: 500;
+}
+
+.east600 {
+    font-family: 'Eastman Grotesque Trial';
+    font-weight: 600;
+}
+
+.east700 {
+    font-family: 'Eastman Grotesque Trial';
+    font-weight: 700;
+}
+
+.text-white {
+    color: white;
+}
+
+/* ================== Navbar ================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+    height: 100px;
+    backdrop-filter: blur(0);
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    opacity: 1;
+}
+
+.navbar .fade-effect-nav {
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    flex: none;
+    height: 250px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+    transition: all 0.2s linear;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li ion-icon {
+    color: white;
+    list-style: none;
+    font-size: 1.4rem;
+    padding: 6px;
+    transition: all 0.2s linear;
+}
+
+.navbar ul li ion-icon:hover {
+    cursor: pointer;
+    border-radius: 80px;
+    background-color: rgb(215, 164, 92);
+}
+
+.navbar .menubtn {
+    height: 40px;
+    width: 98px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-right: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    position: relative;
+}
+
+.navbar .menubtn:hover {
+    cursor: pointer;
+    background-color: rgb(215, 164, 92);
+    color: white;
+}
+
+/* ===================  Main Section ================ */
+
+.banner-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    position: relative;
+    top: 0;
+    z-index: 2;
+    margin: 50px auto;
+}
+
+.banner-section video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-section #bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000 url("../asset/bottle.svg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+    transition: all 0.2s linear;
+
+}
+
+.banner-section .bg-overlay {
+    position: absolute;
+    background-color: #11361C;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+}
+
+.banner-section .content {
+    width: 100%;
+    height: 100%;
+}
+
+.content h1 {
+    position: relative;
+    top: 45%;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 6rem;
+    transition: all 0.2s linear;
+}
+
+.content svg {
+    position: relative;
+    top: 22%;
+    width: 350px;
+    margin: 0 auto;
+    animation-name: rotate;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================ Text Pop Section ================ */
+.text-popup {
+    position: relative;
+    bottom: 150px;
+    transition: all 0.2s linear;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    scale: 0;
+}
+
+.text-popup h2 {
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.text-popup h2:nth-child(2) {
+    color: #d7a45c;
+}
+
+.text-popup p {
+    text-align: center;
+    margin: 0 auto;
+    width: 37%;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+.btn {
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    padding: 23px 100px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    border: 3px solid #d7a45c;
+    color: #d7a45c;
+}
+
+/*  ============== First Section ============= */
+
+#first-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 100px;
+    width: 100%;
+    background-color: #000;
+}
+
+#first-section .logoimg2 {
+    z-index: 4;
+    padding-top: 25px;
+    opacity: 0;
+}
+
+#first-section img:nth-child(2) {
+    padding: 300px 0 0 0;
+}
+
+#first-section .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#first-section video {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: relative;
+}
+
+#first-section .text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    mix-blend-mode: multiply;
+}
+
+#first-section .text-box h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 200px;
+    line-height: 180px;
+}
+
+#first-section .para {
+    position: relative;
+    top: -90px;
+    text-align: center;
+    width: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 60px auto;
+}
+
+#first-section .para p {
+    color: white;
+    line-height: 23px;
+}
+
+/*  ================= Second Section ================ */
+#second-section {
+    position: relative;
+    top: 1800px;
+    overflow: hidden;
+}
+
+#second-section .fade-effect {
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    flex: none;
+    height: 250px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 1;
+}
+
+#second-section video {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+#second-section .container {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#second-section .container h2 {
+    color: white;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+#second-section .container span {
+    color: #d7a45c;
+}
+
+#second-section .para {
+    padding-top: 30px;
+    text-align: center;
+    width: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#second-section .para p {
+    color: white;
+    line-height: 23px;
+}
+
+#second-section .box {
+    height: 412px;
+    overflow: hidden;
+    position: relative;
+    bottom: 300px;
+    z-index: 1;
+    transform: scale(0.8);
+}
+
+#second-section .box .box-outer {
+    background-color: #11361c;
+    border-radius: 20px;
+    bottom: 0;
+    flex: none;
+    left: calc(50.00000000000002% - 695px / 2);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 695px;
+    z-index: 1;
+}
+
+#second-section .box .box-inner {
+    --border-bottom-width: 3px;
+    --border-color: #d7a45c;
+    --border-left-width: 3px;
+    --border-right-width: 3px;
+    --border-style: solid;
+    --border-top-width: 3px;
+    border-radius: 13px;
+    flex: none;
+    height: 391px;
+    left: calc(50.00000000000002% - 675px / 2);
+    overflow: hidden;
+    position: absolute;
+    top: calc(49.75728155339808% - 391px / 2);
+    width: 675px;
+    z-index: 1;
+}
+
+#second-section .box .box-inner::after {
+    content: "";
+    border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+    border-color: var(--border-color, none);
+    border-style: var(--border-style, none);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+/* =============== Last Section ============== */
+#third-section {
+    position: relative;
+    top: 1385px;
+    height: 500px;
+    background-color: #000;
+}
