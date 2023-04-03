@@ -59,7 +59,7 @@ window.addEventListener("scroll", () => {
         fade.style.display = "none";
     }
 
-    if (value == 1970 || value >= 2000) {
+    if (value == 1970 || value == 1980 || value >= 2000) {
         logo.style.transition = "opacity 0.2s linear";
         logo.style.opacity = 1;
         logo.style.position = "fixed";

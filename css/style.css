@@ -80,25 +80,14 @@ body {
     font-weight: 700;
 }
 
-.text-white {
-    color: white;
-}
 
 /* ================== Navbar ================ */
 .navbar {
-    position: fixed;
-    top: 0;
-    z-index: 4;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 50px;
-    height: 100px;
+    height: 120px;
     backdrop-filter: blur(0);
     background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    opacity: 1;
 }
 
 .navbar .fade-effect-nav {
@@ -116,9 +105,6 @@ body {
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 20px;
 }
 
@@ -155,6 +141,7 @@ body {
     align-items: center;
     transition: all 0.2s linear;
     position: relative;
+    margin-left: 50px;
 }
 
 .navbar .menubtn:hover {
@@ -287,7 +274,6 @@ body {
     cursor: pointer;
 }
 
-
 .btn:hover {
     border: 3px solid #d7a45c;
     color: #d7a45c;
@@ -296,9 +282,6 @@ body {
 /*  ============== First Section ============= */
 
 #first-section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 100px;
@@ -391,7 +374,7 @@ body {
     object-fit: cover;
 }
 
-#second-section .container {
+#second-section .content {
     width: 100%;
     position: absolute;
     top: 200px;
@@ -402,13 +385,13 @@ body {
     text-align: center;
 }
 
-#second-section .container h2 {
+#second-section .content h2 {
     color: white;
     font-size: 100px;
     text-transform: uppercase;
 }
 
-#second-section .container span {
+#second-section .content span {
     color: #d7a45c;
 }
 
