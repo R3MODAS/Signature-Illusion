@@ -302,7 +302,7 @@ body {
     padding: 300px 0 0 0;
 }
 
-#first-section .container {
+#first-section .firstsectCont {
     position: relative;
     width: 100%;
     height: 100%;
@@ -316,9 +316,9 @@ body {
 }
 
 #first-section .text-box {
+    padding-top: 40px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -5px;
     width: 100%;
     height: 100%;
     background: #000;
@@ -332,9 +332,8 @@ body {
 
 #first-section .para {
     position: relative;
-    top: -90px;
+    top: -60px;
     text-align: center;
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,24 +342,25 @@ body {
 
 #first-section .para p {
     line-height: 23px;
+    width: 36%;
 }
 
 /*  ================= Second Section ================ */
 #second-section {
     position: relative;
-    top: 1800px;
+    top: 1997px;
     overflow: hidden;
 }
 
 #second-section .fade-effect {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     flex: none;
-    height: 250px;
+    height: 400px;
     left: 0;
     overflow: hidden;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 0px;
     z-index: 1;
 }
 
@@ -451,7 +451,7 @@ body {
 /* =============== Last Section ============== */
 #third-section {
     position: relative;
-    top: 1385px;
+    top: 1500px;
     height: 500px;
     background-color: #000;
 }

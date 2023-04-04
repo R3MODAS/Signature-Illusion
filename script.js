@@ -43,23 +43,23 @@ window.addEventListener("scroll", () => {
         textPop.style.scale = "1.08";
     }
 
-    if (value < 1000) {
+    if (value < 1200) {
         firstSect.style.position = "static";
         firstsectCont.style.display = "none";
     }
 
-    if (value >= 1000) {
+    if (value >= 1200) {
         firstSect.style.position = "relative";
-        firstSect.style.top = "1800px";
+        firstSect.style.top = "2000px";
         firstsectCont.style.display = "block";
     }
 
-    if (value < 2000) {
+    if (value < 2200) {
         logo.style.opacity = 0;
         fade.style.display = "none";
     }
 
-    if (value == 1970 || value == 1980 || value >= 2000) {
+    if (value == 2175 || value >= 2200) {
         logo.style.transition = "opacity 0.2s linear";
         logo.style.opacity = 1;
         logo.style.position = "fixed";
