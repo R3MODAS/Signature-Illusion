@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -247,6 +249,7 @@ body {
 
 .text-popup h2 {
     font-size: 100px;
+    line-height: 90px;
     text-transform: uppercase;
 }
 
@@ -257,10 +260,10 @@ body {
 .text-popup p {
     text-align: center;
     margin: 0 auto;
-    width: 37%;
+    width: 50%;
     line-height: 25px;
     font-size: 18px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 }
 
 .btn {
@@ -269,7 +272,7 @@ body {
     color: white;
     font-size: 17px;
     border-radius: 8px;
-    padding: 23px 100px;
+    padding: 20px 100px;
     transition: all 0.2s linear;
     cursor: pointer;
 }
@@ -282,7 +285,6 @@ body {
 /*  ============== First Section ============= */
 
 #first-section {
-    flex-direction: column;
     flex-wrap: nowrap;
     gap: 100px;
     width: 100%;
@@ -320,16 +322,10 @@ body {
     width: 100%;
     height: 100%;
     background: #000;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     mix-blend-mode: multiply;
 }
 
 #first-section .text-box h2 {
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
     font-size: 200px;
     line-height: 180px;
 }
@@ -338,7 +334,7 @@ body {
     position: relative;
     top: -90px;
     text-align: center;
-    width: 36%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,7 +342,6 @@ body {
 }
 
 #first-section .para p {
-    color: white;
     line-height: 23px;
 }
 
@@ -365,7 +360,7 @@ body {
     overflow: hidden;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 0;
     z-index: 1;
 }
 
@@ -379,17 +374,10 @@ body {
     width: 100%;
     position: absolute;
     top: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 #second-section .content h2 {
-    color: white;
     font-size: 100px;
-    text-transform: uppercase;
 }
 
 #second-section .content span {
@@ -400,13 +388,9 @@ body {
     padding-top: 30px;
     text-align: center;
     width: 36%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #second-section .para p {
-    color: white;
     line-height: 23px;
 }
 
@@ -458,7 +442,6 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    box-sizing: border-box;
     left: 0;
     top: 0;
     border-radius: inherit;
