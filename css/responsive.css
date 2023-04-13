@@ -64,12 +64,52 @@
 }
 
 @media(max-width: 767px) {
-    .navbar ul {
-        gap: 0;
+
+    .header__ul {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+        position: fixed;
+        z-index: 999;
+        right: -300%;
+        top: 0;
+        height: 100vh;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 30px;
+        transition: all 0.3s ease;
     }
 
-    .navbar .menubtn {
-        margin-left: 10px;
+    .ham__menu{
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        position: relative;
+        right: 20px;
+        top: -10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .close__menu {
+        position: absolute;
+        font-size: 2rem;
+        color: #000;
+        top: 30px;
+        display: block;
+    }
+
+    .header__ul li ion-icon {
+        color: #000;
+    }
+
+    .header .menubtn {
+        background-color: #000;
+        color: #fff;
     }
 
     .text-popup h2 {
@@ -78,11 +118,20 @@
     }
 
     #first-section video {
-        height: 350px;
+        height: 300px;
     }
 
     #first-section .text-box {
         padding-top: 0px;
+    }
+
+    #first-section .text-box h2 {
+        font-size: 90px;
+        line-height: 90px;
+    }
+
+    #second-section {
+        top: 1990px;
     }
 
     #second-section .content h2 {

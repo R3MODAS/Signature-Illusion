@@ -84,7 +84,7 @@ body {
 
 
 /* ================== Navbar ================ */
-.navbar {
+.header {
     width: 100%;
     gap: 50px;
     height: 120px;
@@ -92,7 +92,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.navbar .fade-effect-nav {
+.header .fade-effect-nav {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     flex: none;
     height: 250px;
@@ -106,29 +106,36 @@ body {
     transition: all 0.2s linear;
 }
 
-.navbar ul {
+.header__ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-.navbar ul li {
+.header__ul.active{
+    right: 0;
+}
+
+.header ul li {
     list-style: none;
 }
 
-.navbar ul li ion-icon {
+.header__ul li ion-icon {
     color: white;
     list-style: none;
     font-size: 1.4rem;
-    padding: 6px;
+    padding: 0;
     transition: all 0.2s linear;
 }
 
-.navbar ul li ion-icon:hover {
+.header ul li ion-icon:hover {
     cursor: pointer;
     border-radius: 80px;
     background-color: rgb(215, 164, 92);
 }
 
-.navbar .menubtn {
+.header .menubtn {
     height: 40px;
     width: 98px;
     border-radius: 80px;
@@ -143,14 +150,22 @@ body {
     align-items: center;
     transition: all 0.2s linear;
     position: relative;
-    margin-left: 50px;
 }
 
-.navbar .menubtn:hover {
+.header .menubtn:hover {
     cursor: pointer;
     background-color: rgb(215, 164, 92);
     color: white;
 }
+
+.ham__menu{
+    display: none;
+}
+
+.close__menu{
+    display: none;
+}
+
 
 /* ===================  Main Section ================ */
 
@@ -166,7 +181,7 @@ body {
     position: relative;
     top: 0;
     z-index: 2;
-    margin: 50px auto;
+    margin: 20px auto;
 }
 
 .banner-section video {

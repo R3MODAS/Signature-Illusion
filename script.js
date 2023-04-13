@@ -1,15 +1,13 @@
-let bg = document.getElementById("bg");
-let bgcolor = document.querySelector(".bg-overlay");
-let heading = document.querySelector(".heading");
-let rotateimg = document.querySelector(".rotatingimg");
-let textPop = document.querySelector(".text-popup");
-let firstSect = document.querySelector("#first-section");
-let firstsectCont = document.querySelector(".firstsectCont");
-let box = document.querySelector(".box");
-let logo = document.querySelector(".logoimg2");
-let navbar = document.querySelector(".navbar");
-let fade = document.querySelector(".fade-effect-nav");
-let menubtn = document.querySelector(".menubtn");
+const bg = document.getElementById("bg");
+const bgcolor = document.querySelector(".bg-overlay");
+const heading = document.querySelector(".heading");
+const rotateimg = document.querySelector(".rotatingimg");
+const textPop = document.querySelector(".text-popup");
+const firstSect = document.querySelector("#first-section");
+const firstsectCont = document.querySelector(".firstsectCont");
+const box = document.querySelector(".box");
+const logo = document.querySelector(".logoimg2");
+const fade = document.querySelector(".fade-effect-nav");
 
 window.addEventListener("scroll", () => {
     let value = window.scrollY;
@@ -54,23 +52,31 @@ window.addEventListener("scroll", () => {
         firstsectCont.style.display = "block";
     }
 
-    if (value < 2200) {
+    if(value < 2100){
         logo.style.opacity = 0;
         fade.style.display = "none";
     }
 
-    if (value == 2175 || value >= 2200) {
-        logo.style.transition = "opacity 0.2s linear";
+    if(value >= 2100){
+        logo.style.transition = "all 0.2s linear";
         logo.style.opacity = 1;
         logo.style.position = "fixed";
-        logo.style.top = "0px";
+        logo.style.top = "0";
         fade.style.display = "block";
-
     }
 
     if (value >= 3300) {
         box.style.scale = 0.8 + (value - 2000) / 4000;
     }
-    console.log(value);
+})
 
+const menu = document.querySelector(".ham__menu");
+const close = document.querySelector(".close__menu");
+const navbar = document.querySelector(".header__ul");
+menu.addEventListener('click', ()=>{
+    navbar.classList.add("active");
+})  
+
+close.addEventListener('click',()=>{
+    navbar.classList.remove("active");
 })
