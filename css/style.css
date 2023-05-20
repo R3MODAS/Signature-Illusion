@@ -193,6 +193,14 @@ body {
     object-fit: cover;
 }
 
+.banner-section .bg-overlay {
+    position: absolute;
+    background-color: #11361C;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+}
+
 .banner-section #bg {
     position: absolute;
     width: 100%;
@@ -203,16 +211,8 @@ body {
     background-position: center;
     mix-blend-mode: multiply;
     transition: all 0.2s linear;
-
 }
 
-.banner-section .bg-overlay {
-    position: absolute;
-    background-color: #11361C;
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s linear;
-}
 
 .banner-section .content {
     width: 100%;
