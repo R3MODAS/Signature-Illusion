@@ -21,7 +21,8 @@ body {
     min-height: 4500px;
 }
 
-/* ==================  Font ======================== */
+/* ====================  Font ======================== */
+
 @font-face {
     font-family: 'Variera Demo';
     src: url("../css/font/variera-demo.bold-700.ttf");
@@ -53,6 +54,7 @@ body {
 }
 
 /* ==================  Global Classes ======================== */
+
 .inter {
     font-family: 'Inter', sans-serif;
 }
@@ -82,8 +84,24 @@ body {
     font-weight: 700;
 }
 
+.btn {
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    padding: 20px 100px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
 
-/* ================== Navbar ================ */
+.btn:hover {
+    border: 3px solid #d7a45c;
+    color: #d7a45c;
+}
+
+
+/* ================== Navbar Section ================ */
 .header {
     width: 100%;
     gap: 50px;
@@ -92,7 +110,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.header .fade-effect-nav {
+.header .fade__effect {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     flex: none;
     height: 250px;
@@ -159,25 +177,6 @@ body {
     color: white;
 }
 
-.ham__menu{
-    display: none;
-}
-
-.close__menu{
-    display: none;
-}
-
-
-/* ===================  Main Section ================ */
-
-.banner-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-}
-
 .logo {
     position: relative;
     top: 0;
@@ -185,7 +184,16 @@ body {
     margin: 20px auto;
 }
 
-.banner-section video {
+/* ===================  Main Section ================ */
+#main__section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#main__section > video{
     position: absolute;
     top: 0;
     width: 100%;
@@ -193,7 +201,7 @@ body {
     object-fit: cover;
 }
 
-.banner-section .bg-overlay {
+#main__section > .bg__layer{
     position: absolute;
     background-color: #11361C;
     width: 100%;
@@ -201,7 +209,7 @@ body {
     transition: all 0.2s linear;
 }
 
-.banner-section #bg {
+#main__section > .bg__overlay{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -213,13 +221,12 @@ body {
     transition: all 0.2s linear;
 }
 
-
-.banner-section .content {
+#main__section > .text__content{
     width: 100%;
     height: 100%;
 }
 
-.content h1 {
+#main__section > .text__content > h1 {
     position: relative;
     top: 45%;
     text-align: center;
@@ -230,16 +237,13 @@ body {
     transition: all 0.2s linear;
 }
 
-.content svg {
+#main__section > .text__content > svg {
     position: relative;
     top: 22%;
     width: 350px;
     margin: 0 auto;
-    animation-name: rotate;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     transition: all 0.2s linear;
+    animation: rotate 40s linear infinite;
 }
 
 @keyframes rotate {
@@ -252,8 +256,7 @@ body {
     }
 }
 
-/* ================ Text Pop Section ================ */
-.text-popup {
+#main__section .text__box{
     position: relative;
     bottom: 150px;
     transition: all 0.2s linear;
@@ -263,17 +266,17 @@ body {
     scale: 0;
 }
 
-.text-popup h2 {
+#main__section .text__box > h2{
     font-size: 100px;
     line-height: 90px;
     text-transform: uppercase;
 }
 
-.text-popup h2:nth-child(2) {
+.text__box > h2:nth-child(2) {
     color: #d7a45c;
 }
 
-.text-popup p {
+.text__box > p {
     text-align: center;
     margin: 0 auto;
     width: 50%;
@@ -282,56 +285,38 @@ body {
     margin-bottom: 70px;
 }
 
-.btn {
-    border: 3px solid white;
-    background-color: transparent;
-    color: white;
-    font-size: 17px;
-    border-radius: 8px;
-    padding: 20px 100px;
-    transition: all 0.2s linear;
-    cursor: pointer;
-}
-
-.btn:hover {
-    border: 3px solid #d7a45c;
-    color: #d7a45c;
-}
-
-/*  ============== First Section ============= */
-
-#first-section {
-    flex-wrap: nowrap;
+/* ========================= Second Section ======================= */
+#second__section{
     gap: 100px;
     width: 100%;
     background-color: #000;
     transition: all 0.2s linear;
 }
 
-#first-section .logoimg2 {
+.logo__2{
     z-index: 4;
     padding-top: 25px;
     opacity: 0;
 }
 
-#first-section img:nth-child(2) {
+#second__section img:nth-child(2){
     padding: 300px 0 0 0;
 }
 
-#first-section .firstsectCont {
+.second__content{
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-#first-section video {
+.second__content > video{
     width: 100%;
     height: 500px;
     object-fit: cover;
     position: relative;
 }
 
-#first-section .text-box {
+#second__section .text__box{
     padding-top: 40px;
     position: absolute;
     top: -5px;
@@ -341,12 +326,12 @@ body {
     mix-blend-mode: multiply;
 }
 
-#first-section .text-box h2 {
+#second__section .text__box > h2{
     font-size: 200px;
     line-height: 180px;
 }
 
-#first-section .para {
+#second__section .para{
     position: relative;
     top: -60px;
     text-align: center;
@@ -356,19 +341,20 @@ body {
     margin: 0 auto 60px auto;
 }
 
-#first-section .para p {
+#second__section .para > p{
     line-height: 23px;
     width: 36%;
 }
 
+/* =================== Third Section =================== */
 /*  ================= Second Section ================ */
-#second-section {
+#third__section {
     position: relative;
     top: 1997px;
     overflow: hidden;
 }
 
-#second-section .fade-effect {
+#third__section .fade-effect {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     flex: none;
     height: 400px;
@@ -380,39 +366,39 @@ body {
     z-index: 1;
 }
 
-#second-section video {
+#third__section video {
     width: 100%;
     height: 800px;
     object-fit: cover;
 }
 
-#second-section .content {
+#third__section .content {
     width: 100%;
     position: absolute;
     top: 200px;
 }
 
-#second-section .content h2 {
+#third__section .content h2 {
     position: relative;
     z-index: 1;
     font-size: 100px;
 }
 
-#second-section .content span {
+#third__section .content span {
     color: #d7a45c;
 }
 
-#second-section .para {
+#third__section .para {
     padding-top: 30px;
     text-align: center;
     width: 36%;
 }
 
-#second-section .para p {
+#third__section .para p {
     line-height: 23px;
 }
 
-#second-section .box {
+#third__section .box {
     height: 412px;
     overflow: hidden;
     position: relative;
@@ -421,7 +407,7 @@ body {
     transform: scale(0.8);
 }
 
-#second-section .box .box-outer {
+#third__section .box .box-outer {
     background-color: #11361c;
     border-radius: 20px;
     bottom: 0;
@@ -434,7 +420,7 @@ body {
     z-index: 1;
 }
 
-#second-section .box .box-inner {
+#third__section .box .box-inner {
     --border-bottom-width: 3px;
     --border-color: #d7a45c;
     --border-left-width: 3px;
@@ -452,7 +438,7 @@ body {
     z-index: 1;
 }
 
-#second-section .box .box-inner::after {
+#third__section .box .box-inner::after {
     content: "";
     border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
     border-color: var(--border-color, none);
@@ -466,8 +452,8 @@ body {
     pointer-events: none;
 }
 
-/* =============== Last Section ============== */
-#third-section {
+/* =============== Fourth Section ============== */
+#fourth__section {
     position: relative;
     top: 1500px;
     height: 500px;
